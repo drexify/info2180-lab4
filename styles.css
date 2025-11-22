@@ -1,75 +1,132 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #e8f1f8;
     padding: 20px;
+    margin: 0;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
     background: white;
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 h1 {
-    color: #333;
+    color: #2c5f7c;
     text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
 }
 
 .search-box {
     display: flex;
-    gap: 10px;
+    gap: 0;
     margin: 20px 0;
 }
 
 #searchInput {
     flex: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: 12px 15px;
+    border: 2px solid #5fa9cf;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
     font-size: 16px;
+    outline: none;
+}
+
+#searchInput:focus {
+    border-color: #4a8fb8;
 }
 
 #searchBtn {
-    padding: 10px 20px;
-    background-color: #007bff;
+    padding: 12px 30px;
+    background-color: #4692c5;
     color: white;
-    border: none;
-    border-radius: 4px;
+    border: 2px solid #4692c5;
+    border-radius: 0 5px 5px 0;
     cursor: pointer;
     font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s;
 }
 
 #searchBtn:hover {
-    background-color: #0056b3;
+    background-color: #3a7ba8;
+    border-color: #3a7ba8;
 }
 
 #result {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 4px;
+    margin-top: 30px;
+    padding: 0;
+    background-color: #d3e8f4;
+    border-radius: 5px;
     min-height: 100px;
 }
 
+#result ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#result li {
+    padding: 15px 20px;
+    margin: 0;
+    background-color: #d3e8f4;
+    border-bottom: 1px solid #b8dae8;
+    color: #2c5f7c;
+    font-weight: 500;
+}
+
+#result li:first-child {
+    border-radius: 5px 5px 0 0;
+}
+
+#result li:last-child {
+    border-bottom: none;
+    border-radius: 0 0 5px 5px;
+}
+
+#result li:hover {
+    background-color: #c2dff0;
+}
+
 #result h3 {
-    color: #007bff;
-    margin-top: 0;
+    color: #2c5f7c;
+    margin: 0;
+    padding: 20px 20px 10px 20px;
+    font-size: 24px;
+    background-color: #d3e8f4;
+    border-radius: 5px 5px 0 0;
 }
 
 #result h4 {
-    color: #555;
-    margin: 5px 0;
+    color: #2c5f7c;
+    margin: 0;
+    padding: 5px 20px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: #d3e8f4;
 }
 
 #result p {
-    color: #666;
+    color: #2c5f7c;
     line-height: 1.6;
+    margin: 0;
+    padding: 10px 20px 20px 20px;
+    background-color: #d3e8f4;
+    border-radius: 0 0 5px 5px;
 }
 
 .error {
-    color: #d9534f;
+    color: #c0392b;
     font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    padding: 30px;
+    background-color: #d3e8f4;
+    border-radius: 5px;
 }
